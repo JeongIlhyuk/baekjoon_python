@@ -1,0 +1,47 @@
+from itertools import combinations, permutations,product,combinations_with_replacement
+import sys, heapq, copy, math
+from collections import deque
+
+input = sys.stdin.readline
+print = sys.stdout.write
+
+# # 1 input
+N=int(input())
+
+# 2 input
+#N, M = map(int,input().split())
+
+# # Several inputs in a line
+#nums = list(map(int,input().split()))
+
+# # one input in each lines
+# arr = [int(input()) for _ in range(N)] #int
+# arr = [input() for _ in range(N)] #str
+
+#min_heap=[list(map(int,input().split())) for _ in range(N)]
+
+##### Commonly used #####
+
+# for i in permutations([j+1 for j in range(N)],M):
+
+
+
+def fib(n):
+    global count
+    if n==1 or n==2:
+        count1+=1
+        return 1
+    else:
+        return fib(n-2)+fib(n-1)
+def fibonacci(n):
+    global count2
+    arr = [0]*(n+1)
+    arr[0]=arr[1]=arr[2]=1
+    for i in range(3,n+1):
+        arr[i]=arr[i-2]+arr[i-1]
+        count2+=1
+    return arr[n]
+count1=count2=0
+fib(N)
+fibonacci(N)
+print(f'{count1} {count2}\n')
